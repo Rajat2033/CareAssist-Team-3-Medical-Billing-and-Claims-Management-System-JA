@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="admin.js"></script>
+
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <img class="img-responsive " src="../assets/logo1.png">
+
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a>
+                        <i class="uil uil-user-square"></i>
+                        <span class="link-name" routerLink="getallpatients">Patients</span>
+                    </a></li>
+                <li><a>
+                        <i class="uil uil-apps"></i>
+                        <span class="link-name" routerLink="getallproviders">Healthcare Providers</span>
+                    </a></li>
+                <li><a>
+                        <i class="uil uil-left-indent"></i>
+                        <span class="link-name" routerLink="getallcompanies">Insurance Companies</span>
+                    </a></li>
+                <li><a>
+                        <i class="uil uil-chart-pie-alt"></i>
+                        <span class="link-name" routerLink="getallplans">Insurance Plans</span>
+                    </a></li>
+                <li><a>
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name" routerLink="getallinvoices">Invoice Details</span>
+                    </a></li>
+
+                <li><a>
+                        <i class="uil uil-clipboard-notes"></i>
+                        <span class="link-name" routerLink="getallclaims">Claim History</span>
+                    </a></li>
+
+                <li><a>
+                        <i class="uil uil-user-plus"></i>
+                        <span class="link-name" routerLink="addadmin">Add New Admin</span>
+                    </a></li>
+
+            </ul>
+
+            <hr>
+            <ul class="logout-mode">
+                <li><a (click)="logoutAdmin()">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="card tall-card">
+                    <div class="container-fluid">
+                        <div class="title">
+                            <i class="uil uil-create-dashboard"></i>
+                            <span class="text"> Welcome {{adminname}} Admin Dashboard</span>
+                        </div>
+
+                        <div style="padding-left: 20px; padding-right: 20px;">
+                        <router-outlet></router-outlet>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <footer class="copyright">
+        <p class="text"> CareAssist Medical : All Rights Reserved </p>
+    </footer>
+
+
+
+</body>
+
+</html>

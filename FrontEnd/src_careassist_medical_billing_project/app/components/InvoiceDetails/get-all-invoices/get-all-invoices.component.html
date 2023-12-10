@@ -1,0 +1,30 @@
+<div class="dash-content">
+    
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-file-exclamation-alt"></i>
+            <span class="text">All the Generated Invoices List</span>
+        </div>
+
+        <table class=" table"  id="zebra-h">
+           <thead>
+                <th>Sr.No</th>
+                <th>Invoice Id</th>
+                <th>Invoice Date</th>
+                <th>Invoice Due Date</th>
+                <th>Invoice Tax</th>
+                <th>Total Bill Amount</th>
+                <th>Patient Id</th>
+            </thead>
+            <tr *ngFor="let invoices of invoiceList,index as i">
+                <td>{{i+1}}</td>
+                <td>{{invoices.invoiceId}}</td>
+                <td>{{invoices.invoiceDate}}</td>
+                <td>{{invoices.invoiceDueDate}}</td>
+                <td>{{invoices.invoiceTax}}</td>
+                <td>{{invoices.totalBillAmount}}</td>
+                <td>{{invoices.patient?.patientName}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

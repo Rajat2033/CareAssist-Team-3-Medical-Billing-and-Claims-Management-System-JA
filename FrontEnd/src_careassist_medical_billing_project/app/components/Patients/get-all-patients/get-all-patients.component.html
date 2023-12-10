@@ -1,0 +1,41 @@
+<div class="dash-content">
+   
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-file-exclamation-alt"></i>
+            <span class="text">All the Patients List</span>
+        </div>
+
+        
+
+        <table id="zebra-h" class="table">
+            <thead>
+                <th>Sr No.</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Disease</th>
+                <th>Action</th>
+            </thead>
+            <tr *ngFor="let patient of patientList,index as i">
+                <td>{{i+1}}</td>
+                <td>
+                    {{patient.patientId}}
+                </td>
+                <td>{{patient.patientName}}</td>
+                <td>{{patient.patientEmail}}</td>
+                <td>{{patient.patientDOB}}</td>
+                <td>{{patient.patientGender}}</td>
+                <td>{{patient.patientContact}}</td>
+                <td>{{patient.patientAddress}}</td>
+                <td>{{patient.patientDisease}}</td>
+                <td><button type="submit"class=" btn-danger " style="color: black; background-color: red;" (click)="deletePatients(patient.patientId)">Delete</button></td>
+
+            </tr>
+        </table>
+    </div>
+</div>

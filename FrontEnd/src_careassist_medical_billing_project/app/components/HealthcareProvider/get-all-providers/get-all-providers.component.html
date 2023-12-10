@@ -1,0 +1,38 @@
+<div class="dash-content">
+
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-file-exclamation-alt"></i>
+            <span class="text">All the Providers List</span>
+        </div>
+
+        <table class="table " id="zebra-h">
+            <thead>
+                <th>Sr No.</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email Id</th>
+                <th>Gender</th>
+                <th>Speciality</th>
+                <th>Designation</th>
+                <th>Experience</th>
+                <th>Qualification</th>
+                <th>Action</th>
+            </thead>
+
+            <tr *ngFor="let providers of healthcareProvidersList,index as i">
+                <td>{{i+1}}</td>
+                <td>{{providers.providerId}}</td>
+                <td>{{providers.providerName}}</td>
+                <td>{{providers.providerEmail}}</td>
+                <td>{{providers.providerGender}}</td>
+                <td>{{providers.providerSpeciality}}</td>
+                <td>{{providers.providerDesignation}}</td>
+                <td>{{providers.providerExperience}}</td>
+                <td>{{providers.providerQualification}}</td>
+                <td><button class="btn btn-danger "  (click)="deleteProvider(providers.providerId)">Delete</button></td>
+
+            </tr>
+        </table>
+    </div>
+</div>

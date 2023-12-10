@@ -1,0 +1,39 @@
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'red'}">Add a New Admin</h2>
+                        <form #formData="ngForm" (ngSubmit)="addAdmin(formData)">
+                            <div class="form-group">
+                                <label>Admin Name</label><input type="text" class="form-control" #adminname="ngModel"
+                                    name="adminName" required ngModel placeholder="give admin username">
+                                <span style="color: red;" *ngIf="adminname.touched && adminname.invalid">Give Proper
+                                    Name.</span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>Admin Password</label><input type="password" class="form-control"
+                                    #adminPassword="ngModel" name="adminPassword" required ngModel placeholder="Ex:Xyzwa@9684">
+                                <span style="color: red;" *ngIf="adminPassword.touched && adminname.invalid">Admin
+                                    Password Must contain at least one capital letter,one special symbol and numbers and
+                                    some lowercase and length should be at least 8</span>
+                            </div>
+
+
+                            <br>
+
+                            <button type="submit" class="btn btn-primary col-md-12" [disabled]="formData.invalid">Submit</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br>

@@ -1,0 +1,31 @@
+
+<br>    <br>
+    <div class="title">
+        <i class="fa fa-list" aria-hidden="true"></i>
+        <span class="text"> &nbsp;<b>Claim History</b> </span>
+    </div>
+    <br>
+      <table class="table" id="zebra-h">
+            <thead>
+                <th>Sr.No</th>
+                <th>Claim Id</th>
+                <th>Claim Amount</th>
+                <th>Claim Status</th>
+                <th>Hospital Bill</th>
+                <th>Patient Name</th>
+                <th>Plan Name </th>
+            </thead>
+            <tr *ngFor="let claims of claimList,index as i">
+
+                <td>{{i+1}}</td>
+                <td>{{claims.claimId}}</td>
+                <td>{{claims.claimAmount}}</td>
+                <td>{{claims.claimStatus}}</td>
+                <td>{{claims.invoiceAmount}}</td>
+                <td>{{claims.patient?.patientName}}</td>
+                <td>{{claims.plans?.planName}}</td>
+            </tr>
+        </table>
+
+
+<div class="space"></div>

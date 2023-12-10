@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Patients</title>
+</head>
+
+<body>
+    <section class="vh-100 bg-image" style="background-image: url('../../../../assets/registerBack.png');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#87CEEB'}">Register New
+                                    Insurance Company</h2>
+                                <form [formGroup]="registerCompanyFormsGroup" (click)="submitform()">
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="name">Your Company Name</label>
+                                        <input type="text" id="name" class="form-control " formControlName="companyName"
+                                            placeholder="Enter Company Name"
+                                            [ngClass]="{'is-invalid':submitted && f['companyName'].errors}">
+                                        <div *ngIf="submitted && f['companyName'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['companyName'].errors['required']">Company Name is mandatory
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="form3Example4cg">Enter Password</label>
+                                        <input type="password" id="password" class="form-control "
+                                            formControlName="companyPassword" placeholder=" Enter your Password"
+                                            [ngClass]="{'is-invalid':submitted && f['companyPassword'].errors}">
+                                        <div *ngIf="submitted && f['companyPassword'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['companyPassword'].errors['required']">Password is mandatory
+                                            </div>
+                                            <div *ngIf=" f['companyPassword'].errors['pattern']">Password must contain
+                                                at least one digit, one lowercase letter, one uppercase letter, one
+                                                special character, and be at least 8 characters long.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="email"> Company Email</label>
+                                        <input type="email" id="email" class="form-control "
+                                            formControlName="companyEmail" placeholder=" Ex:abcd@gmail.com"
+                                            [ngClass]="{'is-invalid':submitted && f['companyEmail'].errors}">
+                                        <div *ngIf="submitted && f['companyEmail'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['companyEmail'].errors['required']">Company Email address is
+                                                mandatory
+                                            </div>
+                                            <div *ngIf=" f['companyEmail'].errors['email']">Invalid Email Format
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="contact">Company Contact</label>
+                                        <input type="tel" id="contact" class="form-control" formControlName="companyContact"
+                                            placeholder=" +91-XXXXXXXXXX"
+                                            [ngClass]="{'is-invalid':submitted && f['companyContact'].errors}">
+                                        <div *ngIf="submitted && f['companyContact'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['companyContact'].errors['required']">Company Contact Number is
+                                                mandatory
+                                                </div>
+                                                
+                                           
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="year">Established Year</label>
+                                        <input type="date" id="year" class="form-control " formControlName="companyStartYears"
+                                            placeholder="Enter year" [max]="maxDate"
+                                            [ngClass]="{'is-invalid':submitted && f['companyStartYears'].errors}">
+                                            <div *ngIf="submitted && f['companyStartYears'].errors" class="invalid-feedback">
+                                                <div *ngIf=" f['companyStartYears'].errors['required']">Company Established Year is
+                                                    mandatory
+                                                </div>
+                                                
+                                            </div> 
+                                    </div>
+
+                                    <br>
+                                    <button type="submit" class="btn btn-primary col-lg-12"  [disabled]="registerCompanyFormsGroup.invalid">Register</button>
+                                    <br>
+
+                                    <p class="text-center text-muted mb-0">Have already an account? <a 
+                                            class="fw-bold text-body"><u routerLink="/login/company">Login here</u></a></p>
+
+                                            <i class="bi bi-arrow-left"> </i>
+                                            <button class="btn" routerLink="/"> Back to home</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="copyright">
+            <p class="text"> CareAssist Medical :All rights reserved</p>
+        </footer>
+    </section>
+</body>
+
+</html>

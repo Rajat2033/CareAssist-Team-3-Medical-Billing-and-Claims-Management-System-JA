@@ -1,0 +1,32 @@
+<div class="dash-content">
+
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-file-exclamation-alt"></i>
+            <span class="text">All the Insurance Claims List</span>
+        </div>
+
+        <table class="table" id="zebra-h">
+            <thead>
+                <th>Sr.No</th>
+                <th>Claim Id</th>
+                <th>Claim Amount</th>
+                <th>Claim Status</th>
+                <th>Hospital Bill</th>
+                <th>Patient Name</th>
+                <th>Plan Name </th>
+            </thead>
+            <tr *ngFor="let claims of claimsList,index as i">
+
+                <td>{{i+1}}</td>
+                <td>{{claims.claimId}}</td>
+                <td>{{claims.claimAmount}}</td>
+                <td>{{claims.claimStatus}}</td>
+                <td>{{claims.invoiceAmount}}</td>
+                <td>{{claims.patient?.patientName}}</td>
+                <td>{{claims.plans?.planName}}</td>
+            </tr>
+        </table>
+
+    </div>
+</div>

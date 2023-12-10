@@ -1,0 +1,34 @@
+<br>
+<br>
+<div class="dash-content">
+    <div class="activity">
+        <div class="title">
+            <i class="fa-solid fa-list"></i>
+            <span class="text" > &nbsp; <b>All the Insurance Plan List</b></span>
+        </div>
+
+        <br>
+        <table class="table" id="zebra-h">
+            <thead>
+                <th>Sr No.</th>
+                <th>Plan Id</th>
+                <th>Plan Name</th>
+                <th>Plan Type</th>
+                <th>Cover Amount</th>
+                <th>Plan Emi</th>
+                <th>Details</th>
+                
+            </thead>
+            <tr *ngFor="let plan of insurancePlanList,index as i">
+                <td>{{i+1}}</td>
+                <td>{{plan.planId}}</td>
+                <td>{{plan.planName}}</td>
+                <td>{{plan.planType}}</td>
+                <td>{{plan.planCoverAmount}}</td>
+                <td>{{plan.planEmi}}</td>
+                <td>{{plan.planDetails}}</td> 
+               
+            </tr>
+        </table>
+    </div>
+</div>

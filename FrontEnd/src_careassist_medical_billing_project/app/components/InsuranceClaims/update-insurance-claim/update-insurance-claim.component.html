@@ -1,0 +1,46 @@
+<br>
+
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#007BFF'}">Update Claim Status
+                        </h2>
+
+                        <form #formData="ngForm" (ngSubmit)="editClaimStatus(formData)">
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="id">Enter Claim Id</label>
+                                <input type="number" id="id" class="form-control " placeholder="Enter claim Id"
+                                    name="claimId" ngModel required #claimId="ngModel">
+                                    <span *ngIf="claimId.touched && claimId.invalid" style="color:red">Claim Id is Required for update</span>
+
+                            </div>
+
+                            <br>
+                            <label class="control-label">Update Status</label>
+                            <select type="dropdown" class="form-control" name="claimStatus" ngModel required #status="ngModel">
+                                <option value="" disabled selected>select Status</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                              
+                            </select>
+                            <span *ngIf="status.touched && status.invalid" style="color:red">Updating Status is much much Mandatory</span>
+                            <br><br>                            <br>
+                            <button type="submit" class="btn btn-primary col-lg-12" [disabled]="formData.invalid">Update Claim</button>
+                            <br>
+
+
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>

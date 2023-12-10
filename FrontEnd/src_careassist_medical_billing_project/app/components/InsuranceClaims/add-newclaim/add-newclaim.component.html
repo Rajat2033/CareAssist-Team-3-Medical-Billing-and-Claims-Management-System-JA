@@ -1,0 +1,40 @@
+
+
+<br>
+<br><div class="container col-md-6">
+    <div class="card">
+        <div class="card-body">
+            <i class="bi bi-arrow-left"> </i>
+            <button class="btn" routerLink="/patient/dashboard"> Back to dashboard</button>
+
+            <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#007BFF'}">Fill Form to request a
+                Claim</h2>
+            <form #formData="ngForm" (ngSubmit)="addInsuranceClaim(formData)">
+                <div class="form-group">
+                    <label><b>Claim Amount</b></label><input type="number" class="form-control" #claimAmount="ngModel"
+                        name="claimAmount" required ngModel>
+                    <span style="color: red;" *ngIf="claimAmount.touched && claimAmount.invalid">Claim Amount is
+                        Mandatory</span>
+                </div>
+
+
+                <div class="form-group">
+                    <label><b>Invoice Amount</b></label><input type="number" class="form-control" #invoiceAmount="ngModel"
+                        name="invoiceAmount" required ngModel>
+                    <span style="color: red;" *ngIf="invoiceAmount.touched && invoiceAmount.invalid">Invoice Amount is
+                        Mandatory</span>
+                </div>
+
+                <br>
+                <br>
+
+
+                <button type="submit" class="btn btn-primary col-lg-12" [disabled]="formData.invalid">Submit</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br>

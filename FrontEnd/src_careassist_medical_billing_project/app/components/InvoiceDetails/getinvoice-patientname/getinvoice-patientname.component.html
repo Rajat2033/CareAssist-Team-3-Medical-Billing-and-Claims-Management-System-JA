@@ -1,0 +1,41 @@
+<br>
+
+<br>
+<div class="title">
+    <i class="fa fa-list" aria-hidden="true"></i>
+    <span class="text"> &nbsp;<b>Generated Invoices For You</b> </span>
+</div>
+<br>
+<table class=" table"  id="zebra-h">
+    <thead>
+         <th>Sr.No</th>
+         <th>Invoice Id</th>
+         <th>Invoice Date</th>
+         <th>Invoice Due Date</th>
+         <th>Invoice Tax</th>
+         <th>Consultaion Fees</th>
+         <th>Diagnostic Test Fees</th>
+         <th>Diagnostic Scans Fees</th>
+         <th>Calculated Amount</th>
+         <th>Total Bill Amount</th>
+         <th>Patient Name</th>
+         <th>Status</th>
+         <th>Invoice</th>
+     </thead>
+     <tr *ngFor="let invoices of invoicesList,index as i ">
+         <td>{{i+1}}</td>
+         <td>{{invoices.invoiceId}}</td>
+         <td>{{invoices.invoiceDate}}</td>
+         <td>{{invoices.invoiceDueDate}}</td>
+         <td>{{invoices.invoiceTax}}</td>
+         <td>{{invoices.consultationFee}}</td>
+         <td>{{invoices.diagnosticScanFee}}</td>
+         <td>{{invoices.diagnosticTestsFee}}</td>
+         <td>{{invoices.invoiceTotalAmount}}</td>
+         <td>{{invoices.totalBillAmount}}</td>
+         <td>{{invoices.patient?.patientName}}</td>
+         <td><input type="checkbox"  [(ngModel)]="status">{{  status}}</td>
+         <td><button type="submit" class=" btn-success"  style="color: black;" (click)="getInvoice(invoices.invoiceId)">Generate Invoice</button></td>
+     </tr>
+ </table>
+<div class="space"></div>

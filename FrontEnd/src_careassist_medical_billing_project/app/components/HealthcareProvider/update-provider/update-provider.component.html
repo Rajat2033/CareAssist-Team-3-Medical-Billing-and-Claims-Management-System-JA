@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <br>
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#007BFF'}">Update
+                                     Healthcare Provider</h2>
+
+                                <form #formData="ngForm"(ngSubmit)="updateProvider(formData.value)">
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="id"><b>Enter Provider Id</b></label>
+                                        <input type="text" id="id" class="form-control "
+                                            placeholder="Enter Your Id " name="providerId" ngModel required #providerId="ngModel">
+                                            <span *ngIf="providerId.touched && providerId.invalid" style="color:red">Provider Id is Required for update</span>
+
+                                    </div>
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="name"><b>Enter Name</b></label>
+                                        <input type="text" id="name" class="form-control "
+                                            placeholder="Enter Your Full Name" name="providerName" ngModel required #providerName="ngModel">
+                                            <span *ngIf="providerName.touched && providerName.invalid" style="color:red">Name is Mandatory </span>
+
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="password"><b>Enter Password</b></label>
+                                        <input type="password" class="form-control " id="password"
+                                            name="providerPassword" placeholder="Enter Your Password" #providerPassword="ngModel"
+                                           ngModel required >
+                                           <span *ngIf="providerPassword.invalid && providerPassword.touched" style="color: red;">Password must contain at least one Uppercase ,one lower case ,one number and one special character and lentgh should be at least 8</span>
+                                    </div>
+
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="email"><b>Enter Email Id</b></label>
+                                        <input type="email" id="email" class="form-control " id="email"
+                                            name="providerEmail" placeholder="Ex : xyz@gmail.com" ngModel required #emailId="ngModel">
+                                            <span *ngIf="emailId.touched && emailId.invalid" style="color:red">Email Id is Mandatory </span>
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                    <label class="control-label"><b>Enter Gender</b></label>
+                                    <select type="dropdown" class="form-control" name="providerGender" ngModel required
+                                        placeholder="select Gender" #gender="ngModel">
+                                        <option value="" disabled selected>select gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Not Say"> Prefer Not to say</option>
+                                    </select>
+                                    <span *ngIf="gender.touched && gender.invalid" style="color:red"> Gender is  Mandatory</span>
+                                </div>
+                                    
+
+
+
+                                <div class="form-outline md-4">
+                                    <label class="label-control" for="speciality"><b>Enter your Speciality</b></label>
+                                    <input type="text" class="form-control" id="speciality"
+                                        name="providerSpeciality" placeholder="Enter speciality"
+                                        ngModel required #speciality="ngModel">
+                                        <span *ngIf="speciality.touched && speciality.invalid" style="color:red">Speciality is  Mandatory</span>
+                                </div>
+
+
+                                <div class="form-outline md-4">
+                                    <label class="label-control " for="designation"><b>Enter your Designation</b></label>
+                                    <input type="text" class="form-control" id="designation"
+                                        name="providerDesignation" placeholder="Enter Designation" ngModel required #designation="ngModel">
+                                        <span *ngIf="designation.touched && designation.invalid" style="color:red">Designation is  Mandatory</span>
+                                </div>
+
+                                <div class="form-outline md-4">
+                                    <label class="label-control" for="exp"><b>Enter your Experience</b></label>
+                                    <select type="dropdown" class="form-control" name="providerExperience" ngModel required #experience="ngModel">
+                                        <option value="" disabled selected>select</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1-2</option>
+                                        <option value="2">2-4</option>
+                                        <option value="4">4-7</option>
+                                        <option value="7"> 7-12 </option>
+                                    </select>
+                                    <span *ngIf="experience.touched && experience.invalid" style="color:red">Experience is  Mandatory</span>
+                                </div>
+
+                                <div class="form-outline md-4">
+
+                                    <label class="label-control" for="qualification"><b>Enter your
+                                        qualification</b></label>
+                                    <input type="text" class="form-control" id="qualification"
+                                        name="providerQualification" placeholder="Ex : MBBS" ngModel required #qualification="ngModel">
+                                        <span *ngIf="qualification.touched && qualification.invalid" style="color:red">Qualification is  Mandatory</span>
+                                    </div>
+
+                                    <br>
+                                    <button type="submit" class="btn btn-primary col-lg-12"
+                                        [disabled]="formData.invalid">Update Provider</button>
+                                    <br>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+ 
+
+
+</body>
+
+</html>

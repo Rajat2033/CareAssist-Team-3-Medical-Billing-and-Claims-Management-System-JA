@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <header class="header">
+      <img class="img-responsive " src="../assets/logo1.png" routerLink="/">
+     
+    </header>
+    <div>
+     
+
+      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+            aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a class="navbar-brand">
+            <img src="../../../../assets/logo1.png" height="60px" alt="MDB Logo" loading="lazy" />
+          </a>
+        </div>
+      </nav>
+      <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white" >
+        <div class="position-sticky">
+          <div class="list-group list-group-flush mx-3 mt-4">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+              integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+              crossorigin="anonymous" referrerpolicy="no-referrer" /> <br><br>
+            <a class="list-group-item list-group-item-action py-2 ripple">
+              <i class="bi bi-plus-square-dotted me-3"> </i><span class="font-size"
+                routerLink="add/plan/companyName">Add New Insurance Plan</span></a>
+            <a class="list-group-item list-group-item-action py-2 ripple">
+              <i class="fa-solid fa-list-ul me-3"></i><span class="font-size" routerLink="getclaim/companyName">View
+                Claims</span></a>
+            <a class="list-group-item list-group-item-action py-2 ripple">
+              <i class="bi bi-chat-left-text me-2"></i><span class="font-size" routerLink="update/claim">Update
+                Claim</span></a>
+            <a class="list-group-item list-group-item-action py-2 ripple">
+              <i class="fa-solid fa-user me-3"></i><span class="font-size" routerLink="updatecompany">Update
+                Company</span></a>
+                <!-- <a class="list-group-item list-group-item-action py-2 ripple">
+                  <i class="fa-solid fa-list-ul me-3"></i><span class="font-size" routerLink="getplan/companyname">View
+                    All the plans</span></a> -->
+
+
+
+            <div class="space"></div>
+            <hr>
+            <a class="list-group-item list-group-item-action py-2 ripple" (click)="logoutCompany()">
+              <i class="fa fa-sign-out me-3"></i><span class="font-size">Logout</span></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+   
+    <main style="margin-top: 58px;">
+      <div class="container pt-4">
+        <div class="card" style="width:100%">
+          <div class="card-body"> 
+        <div class="title">
+          <div class="element-with-background">
+         <img src="../../../../assets/companydashboard.png" height="90%" width="40px">
+          <span class="text" style="font-size: 25px">   &nbsp; Welcome <b>{{companyName}}</b> : Company Dashboard</span>
+        </div>
+        </div>
+
+        <router-outlet></router-outlet></div>
+        </div>
+
+      </div>
+    </main>
+    
+  </section>
+
+
+
+<br><br><br><br><br>
+  <footer class="copyright">
+    <p class="text"> CareAssist Medical:All rights reserved</p>
+  </footer>
+
+
+
+</body>
+
+</html>

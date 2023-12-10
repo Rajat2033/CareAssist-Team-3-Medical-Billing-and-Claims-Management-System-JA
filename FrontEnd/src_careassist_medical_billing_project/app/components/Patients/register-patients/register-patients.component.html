@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="vh-130 bg-image" style="background-image: url('../../../../assets/registerBack.png');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#87CEEB'}">Registration
+                                    Form Patients</h2>
+
+                                <form [formGroup]="registerPatientFormsGroup" (click)="submitform()">
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="name">Your Name</label>
+                                        <input type="text" id="name" class="form-control "
+                                            placeholder="Enter your full name" formControlName="patientName"
+                                            [ngClass]="{'is-invalid':submitted && f['patientName'].errors}">
+                                        <div *ngIf="submitted && f['patientName'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['patientName'].errors['required']">Enter
+                                                Name is mandatory</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="email">Your Email Id</label>
+                                        <input type="email" id="email" class="form-control "
+                                            placeholder="Ex:xyz@gmail.com" formControlName="patientEmail"
+                                            [ngClass]="{'is-invalid':submitted && f['patientEmail'].errors}">
+                                        <div *ngIf="submitted && f['patientEmail'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['patientEmail'].errors['required']">Enter
+                                                Email is mandatory</div>
+                                            <div *ngIf=" f['patientEmail'].errors['email']">
+                                                Email is Invalid</div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input type="password" id="password" class="form-control "
+                                            placeholder="Enter your password" formControlName="patientPassword"
+                                            [ngClass]="{'is-invalid':submitted && f['patientPassword'].errors}">
+                                        <div *ngIf="submitted && f['patientPassword'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['patientPassword'].errors['required']">Enter
+                                                Password Properly</div>
+                                            <div *ngIf=" f['patientPassword'].errors['pattern']">Password must contain
+                                                at least one digit, one lowercase letter, one uppercase letter, one
+                                                special character, and be at least 8 characters long.</div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="dob">Date of Birth</label>
+                                        <input type="date" id="dob" class="form-control " placeholder="Ex:dd--mm--yy"
+                                            formControlName="patientDOB" [max]="maxDate"
+                                            [ngClass]="{'is-invalid':submitted && f['patientDOB'].errors}">
+                                        <div *ngIf="submitted && f['patientDOB'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['patientDOB'].errors['required']">Enter
+                                                Date of Birth Properly</div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <label class="control-label">Enter Gender</label>
+                                    <select type="dropdown" class="form-control" formControlName="patientGender">
+                                        <option value="" disabled selected>select gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Not Say"> Prefer Not to say</option>
+                                    </select>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="contact">Enter Contact Number</label>
+                                        <input type="tel" id="contact" class="form-control " placeholder="Ex 9830000014"
+                                            formControlName="patientContact"
+                                            [ngClass]="{'is-invalid':submitted && f['patientContact'].errors}">
+                                        <div *ngIf="submitted && f['patientContact'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['patientContact'].errors['required']">Enter
+                                                Contact Number
+                                                Properly</div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="address">Enter Address</label>
+                                        <input type="text" id="address" class="form-control "
+                                            placeholder="Enter your Contact Number" formControlName="patientAddress"
+                                            [ngClass]="{'is-invalid':submitted && f['patientAddress'].errors}">
+                                        <div *ngIf="submitted && f['patientAddress'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['patientAddress'].errors['required']">Enter
+                                                Address
+                                                Properly</div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="disease">Enter Patient Disease</label>
+                                        <input type="text" id="disease" class="form-control "
+                                            placeholder="Enter your Medical Diagnose" formControlName="patientDisease"
+                                            [ngClass]="{'is-invalid':submitted && f['patientDisease'].errors}">
+                                        <div *ngIf="submitted && f['patientDisease'].errors" class="invalid-feedback">
+                                            <div *ngIf=" f['patientDisease'].errors['required']">Enter
+                                                What Disease You have
+                                                Properly</div>
+
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+
+
+
+
+                                    <button type="submit" class="btn btn-primary col-lg-12"
+                                        [disabled]="registerPatientFormsGroup.invalid">Register</button>
+                                    <br>
+                                    <p class="text-center text-muted mb-0">Have already an account? <a
+                                            class="fw-bold text-body"><u routerLink="/login/patient">Login here</u></a>
+                                    </p>
+
+
+                                    <i class="bi bi-arrow-left"> </i>
+                                    <button class="btn" routerLink="/"> Back to home</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <footer class="copyright">
+            <p class="text"> CareAssist Medical All rights reserved</p>
+        </footer>
+    </section>
+</body>
+
+</html>

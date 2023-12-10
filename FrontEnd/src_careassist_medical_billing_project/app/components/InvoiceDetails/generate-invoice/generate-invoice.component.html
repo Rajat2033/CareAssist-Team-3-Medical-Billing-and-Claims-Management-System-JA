@@ -1,0 +1,59 @@
+<!-- generate-invoice.component.html -->
+
+<div class="container ">
+    <div class="card" width="50%">
+        <div class="card-body">
+            <i class="bi bi-arrow-left"> </i>
+            <button class="btn" routerLink="/provider/dashboard"> Back to dashboard</button>
+            <form [formGroup]="invoiceForm" class=" container col-md-6" (ngSubmit)="onSubmit()">
+                <h1 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#007BFF'}">Enter Invoice Details</h1>
+                <div class="form-group">
+                    <label class="control-label"><b>Invoice Date</b></label>
+                    <input type="date" formControlName="invoiceDate" class="form-control">
+
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label"><b>Invoice Due Date</b></label>
+                    <input type="date" formControlName="invoiceDueDate" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label"><b>Invoice Tax</b></label>
+                    <input type="number" formControlName="invoiceTax" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label"><b>Consulation Fees</b></label>
+                    <input type="number" formControlName="consultationFee" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label"><b>Diagnostic Tests Fees</b></label>
+                    <input type="number" formControlName="diagnosticTestsFee" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label"><b>Diagnostic Scans Fees</b></label>
+                    <input type="number" formControlName="diagnosticScanFee" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label"><b>Invoice Total Amount</b></label>
+                    <input type="number" formControlName="invoiceTotalAmount" class="form-control">
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label"><b>Total Bill Amount</b></label>
+                    <input type="number" formControlName="totalBillAmount" class="form-control">
+                </div>
+
+
+                <br>
+                <button type="submit" class="btn btn-success col-lg-12" [disabled]="!invoiceForm.valid"><b>Generate
+                    Invoice</b></button>
+            </form>
+        </div>
+    </div>
+</div>

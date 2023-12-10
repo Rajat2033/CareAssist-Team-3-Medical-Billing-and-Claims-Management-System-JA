@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="card-body">
+        <i class="bi bi-arrow-left"> </i>
+        <button class="btn" routerLink="/patient/dashboard"> Back to dashboard</button>
+        <div class="container " id="invoice" #invoice>
+
+            <br>
+            <body>
+                <img src="../../../../assets/logo1.png" style="padding-left: 90px;" width="240px">
+                <br>
+                <br>
+                <h2 style="padding-left: 60px; ">Invoice Details</h2>
+                <br><br>
+                
+                <ul>
+                    <li>Invoice Id &nbsp;:&nbsp;{{invoiceDetails.invoiceId}}</li>
+                    <br>
+                    <li>Invoice Date &nbsp;: &nbsp;{{invoiceDetails.invoiceDate}}</li>
+                    <br>
+                    <li>Invoice Due Date &nbsp; : &nbsp;{{invoiceDetails.invoiceDueDate}}</li>
+                    <br>
+                    <li>Patient Id &nbsp;: &nbsp;{{invoiceDetails.patient?.patientId}}</li>
+                    <br>
+                    <li>Patient Name &nbsp;: &nbsp;{{invoiceDetails.patient?.patientName}}</li>
+                    <br>
+                    <li>Patient Address &nbsp;: &nbsp;{{invoiceDetails.patient?.patientAddress}}</li>
+                    <br>
+                    <li>Invoice Tax &nbsp;:&nbsp;{{invoiceDetails.invoiceTax}}</li>
+                    <br>
+                    <li>Consultation Fees &nbsp;:&nbsp;{{invoiceDetails.consultationFee }}</li>
+                    <br>
+                    <li>Diagnostic Test Fees &nbsp;:&nbsp;{{invoiceDetails.diagnosticTestsFee }}</li>
+                    <br>
+                    <li>Diagnostic Scans Fees &nbsp;:&nbsp;{{invoiceDetails.diagnosticScanFee }}</li>
+                    <br>
+                    <li>Calculated Amount &nbsp;:&nbsp;{{invoiceDetails.invoiceTotalAmount }}</li>
+                    <br>
+                    <li>Total Bill Amount &nbsp; :&nbsp;{{invoiceDetails.totalBillAmount }}</li>
+
+                </ul>
+            </body>
+        </div>
+
+
+        <div style="padding-left: 200px;">
+            <button type="button" class="btn btn-success " (click)="generatePdf()">Generate Invoice</button>
+        </div>
+    </div>

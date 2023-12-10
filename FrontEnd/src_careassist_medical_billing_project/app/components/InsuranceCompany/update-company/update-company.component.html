@@ -1,0 +1,85 @@
+<br>
+
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#007BFF'}">Update Your Company Data
+                        </h2>
+
+                        <form #formData="ngForm" (ngSubmit)="editCompany(formData)">
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="id">Enter Company Id</label>
+                                <input type="number" id="id" class="form-control " placeholder="Enter Company Id"
+                                    name="companyId" ngModel required #companyId="ngModel">
+                                <span *ngIf="companyId.touched && companyId.invalid" style="color:red">Company Id is
+                                    Required for update</span>
+
+                            </div>
+
+
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="name">Enter Company Name</label>
+                                <input type="text" id="name" class="form-control " placeholder="Enter Company Name"
+                                    name="companyName" ngModel required #companyName="ngModel">
+                                <span *ngIf="companyName.touched && companyName.invalid" style="color:red">CompanyName
+                                    is Required </span>
+
+                            </div>
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="pass">Enter Company Password</label>
+                                <input type="password" id="pass" class="form-control " placeholder="Enter Company Password"
+                                    name="companyPassword" ngModel required #companyPassword="ngModel">
+                                <span *ngIf="companyPassword.touched && companyPassword.invalid"
+                                    style="color:red">Company Password is Required </span>
+
+                            </div>
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="mail">Enter Company Email</label>
+                                <input type="email" id="mail" class="form-control " placeholder="Enter Company Email"
+                                    name="companyEmail" ngModel required #companyEmail="ngModel">
+                                <span *ngIf="companyEmail.touched && companyEmail.invalid" style="color:red">Company Email
+                                    is Required </span>
+
+                            </div>
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="contact">Enter Company Contact</label>
+                                <input type="tel" id="contact" class="form-control " placeholder="Enter Company Contact"
+                                    name="companyContact" ngModel required #companyContact="ngModel">
+                                <span *ngIf="companyContact.touched && companyContact.invalid" style="color:red">Company Contact
+                                    is Required </span>
+
+                            </div>
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="year">Enter Company Start Years</label>
+                                <input type="date" id="years" class="form-control " placeholder="Enter Company Start Year"
+                                    name="companyContact" ngModel required #companyContact="ngModel">
+                                <span *ngIf="companyContact.touched && companyContact.invalid" style="color:red">Company Contact
+                                    is Required </span>
+
+                            </div>
+                            <br><br>
+                            <button type="submit" class="btn btn-primary col-lg-12" [disabled]="formData.invalid">Update
+                                Company</button>
+                            <br>
+
+
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>

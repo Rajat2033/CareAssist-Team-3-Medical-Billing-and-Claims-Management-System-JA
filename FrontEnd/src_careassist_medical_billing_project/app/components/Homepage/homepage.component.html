@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+     <header>
+          <img class="img-responsive " src="../assets/logo1.png" routerLink="/">
+          <nav class="navbar">
+               <ul>
+                    <li><a href="#aboutus">About</a> </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li>
+                         <div class="dropdown">
+                              Registration
+                              <div class="dropdown-menu">
+                                   <a routerLink="/registerprovider">Healthcare Provider</a>
+                                   <a routerLink="/registerpatient">Patient</a>
+                                   <a routerLink="/registercompany">Insurance Company </a>
+                              </div>
+                         </div>
+                    </li>
+                    <li>
+                         <div class="dropdown">
+                              Login
+                              <div class="dropdown-menu">
+                                   <a routerLink="/login/provider">Healthcare Provider</a>
+                                   <a routerLink="/login/company">Insurance Company</a>
+                                   <a routerLink="/login/patient">Patients </a>
+                                   <a routerLink="/login/admin">Admin </a>
+                              </div>
+                         </div>
+                    </li>
+               </ul>
+          </nav>
+     </header>
+     <div class="row">
+          <div class="column">
+               <img src="../../../assets/medicalback.jpg" alt="Snow" style="width:100%">
+          </div>
+     </div>
+     <div id="aboutus">
+          <div class="card-body">
+               <section class="py-3 py-md-5">
+                    <div class="container">
+                         <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+                              <div class="col-12 col-lg-6 col-xl-5">
+                                   <img class="img-fluid rounded" loading="lazy" src="../../../assets/aboutsus.jpg"
+                                        alt="About 1">
+                              </div>
+                              <div class="col-12 col-lg-6 col-xl-7">
+                                   <div class="row justify-content-xl-center">
+                                        <div class="col-12 col-xl-11">
+                                             <h2 class="mb-3">Who Are We?</h2>
+                                             <p class="lead fs-4 text-secondary mb-3">At CareAssist, we embark on a
+                                                  mission to revolutionize healthcare management through our
+                                                  cutting-edge project - an innovative and comprehensive solution
+                                                  designed for the future of medical billing and claims management.</p>
+                                             <p class="mb-5">CareAssist stands at the forefront of healthcare
+                                                  technology, blending expertise, innovation, and a passion for
+                                                  improving patient care. As the architects of seamless healthcare
+                                                  financial workflows, we're committed to provide any kind of healthcare
+                                                  services to each and every individual out there and
+                                                  ensuring a robust ecosystem for healthcare providers.</p>
+                                             <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                                                  <div class="col-12 col-md-6">
+                                                       <div class="d-flex">
+                                                            <div class="me-4 text-primary">
+                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                                                      height="32" fill="currentColor"
+                                                                      class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                                                      <path
+                                                                           d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                                                 </svg>
+                                                            </div>
+                                                            <div>
+                                                                 <h2 class="h4 mb-3">Modern Machinery</h2>
+                                                                 <p class="text-secondary mb-0">We are into the habit of
+                                                                      making all th things and test automated by using
+                                                                      advanced and world class machinery.</p>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-12 col-md-6">
+                                                       <div class="d-flex">
+                                                            <div class="me-4 text-primary">
+                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                                                      height="32" fill="currentColor" class="bi bi-fire"
+                                                                      viewBox="0 0 16 16">
+                                                                      <path
+                                                                           d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                                                                 </svg>
+                                                            </div>
+                                                            <div>
+                                                                 <h2 class="h4 mb-3">12 Continuous Years of Service</h2>
+                                                                 <p class="text-secondary mb-0">We believe in innovation
+                                                                      and providing excellent service to our patients.
+                                                                 </p>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+          </div>
+     </div>
+     <div class="row row-cols-4 " style="padding-left: 20%;">
+
+          <div class="col">
+               <div class="card">
+                    <img src="../../../assets/card1.jpg" class="card-img-top" alt="machine img" />
+                    <div class="card-body">
+                         <h5 class="card-title">Advanced Machinery</h5>
+                         <p class="card-text">
+                              We have all the sets of advance machinery and we are continuously upgrading with the
+                              needs.
+                         </p>
+                    </div>
+               </div>
+          </div>
+          <div class="col" style="padding-left: 5%;">
+               <div class="card">
+                    <img src="../../../assets/card2.jpg" class="card-img-top" alt="Skyscrapers" />
+                    <div class="card-body">
+                         <h5 class="card-title">Conducts Research</h5>
+                         <p class="card-text">
+                              Our providers helds various researchs and innovates how they can make life better for you.
+                         </p>
+                    </div>
+               </div>
+          </div>
+          <div class="col" style="padding-left: 5%;">
+               <div class="card">
+                    <img src="../../../assets/award.jpg" class="card-img-top" alt="Skyscrapers" />
+                    <div class="card-body">
+                         <h5 class="card-title">Falicitations</h5>
+                         <p class="card-text">
+                              We have got best medical service provider award for 9 time where we have got consecutively
+                              4 times in a row.
+                         </p>
+                    </div>
+               </div>
+          </div>
+
+     </div>
+     <section class="bg-light py-5 py-xl-8" id="services">
+          <div class="container">
+               <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                         <h3 class="fs-6 mb-2 text-secondary text-center text-uppercase">What We Do?</h3>
+                         <h4 class="display-5 mb-5 text-center">We are giving you perfect solutions and gives you
+                              immense sort of happiness with our proficient
+                              services.</h4>
+                         <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                    </div>
+               </div>
+          </div>
+
+          <div class="container overflow-hidden">
+               <div class="row gy-4 gy-xl-0">
+                    <div class="col-12 col-sm-6 col-xl-3">
+                         <div class="card border-0 border-bottom border-primary shadow-sm">
+                              <div class="card-body text-center p-4 p-xxl-5">
+                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"
+                                        style="enable-background:new 0 0 128 128" xml:space="preserve" height="50"
+                                        width="50">
+                                        <path transform="matrix(.1347 0 0 .1347 3874.986 -1363.247)"
+                                             style="fill:#171617"
+                                             d="M-28134.268 10198.376c-9.904-.278-20.645 1.116-32.361 4.885-27.758 8.652-46.59 26.516-56.771 48.009-9.764 20.934-13.111 68.803-13.111 68.803l-112.848.418s-3.348-48.148-13.25-69.221c-9.904-21.493-28.875-39.775-56.494-48.009-11.02-3.21-22.457-5.163-32.5-4.885-29.57.697-311.477 65.313-314.824 70.896-1.256 2.094 37.662 39.495 96.805 82.619l56.633-56.661 23.434 23.445-52.588 52.614c17.855 12.002 36.826 24.144 56.771 35.867l56.074-56.104 23.436 23.446-49.24 49.265c17.297 9.211 35.15 17.863 53.285 25.4l56.213-56.243 23.434 23.446-45.752 43.848c52.17 17.725 105.035 13.005 152.461 13.005h45.195c44.914 0 94.154-4.492 143.252-21.379l-37.383-36.438 23.436-22.965 47.982 48.25c18.414-7.536 36.408-15.79 54.123-24.442l-41.848-41.808 23.434-23.416 49.24 49.28c20.504-11.164 40.033-22.74 58.445-34.185l-47.426-47.447 23.434-23.443 52.447 52.476c61.793-41.031 102.943-76.339 101.549-78.433-3.21-5.58-285.114-70.196-314.687-70.893zm-185.38 290.111 4.498 565.808v.419c0 4.744 3.027 8.513 7.77 8.513 4.604-.14 7.49-4.048 7.49-8.513v-.419l33.527-565.808h-53.285zm26.642-361.007c-34.453 0-62.49 27.074-62.49 61.545 0 22.19 11.717 36.919 29.293 47.805l1.953 68.459h62.49l1.953-68.459c17.574-10.886 29.291-25.019 29.291-47.349 0-34.331-28.037-62.001-62.49-62.001zm-27.199 806.374c-7.812-2.372-14.506-5.304-20.086-8.932-11.16-7.536-15.764-15.771-15.764-23.446s4.604-15.91 15.764-23.306c4.881-3.35 11.018-6.421 18.271-8.514-.418-13.956-.836-27.912-1.256-42.007-15.482-3.489-29.012-9.072-39.613-16.189-16.879-11.583-24.83-25.261-24.83-39.217 0-13.677 7.951-27.632 24.83-39.216 10.043-6.698 22.318-12.142 36.406-15.491-.279-13.956-.559-27.912-.977-41.728-23.852-4.467-44.914-12.979-60.957-24.144-23.572-16.05-35.848-36.426-35.848-57.499-.279-38.658 26.084-31.4 52.867-39.355 12.553-3.769 22.875-8.653 30.686-16.189 3.906-3.768 8.51-8.933 8.789-17.724-2.65-22.609-25.527-26.237-41.707-26.099-7.254.279-13.252 1.257-15.484 1.396-50.354 7.396-67.791 68.245-69.047 97.971 0 35.448 20.924 66.012 51.193 86.945 10.182 6.979 21.48 12.979 33.617 17.725-2.791 1.535-5.58 3.35-8.23 5.163-23.434 15.909-40.174 40.193-40.174 68.244 0 28.331 16.74 52.335 40.174 68.245a145.44 145.44 0 0 0 19.389 11.024c-16.6 11.724-28.316 29.448-28.316 49.963 0 21.911 13.391 40.333 31.246 52.057 11.576 7.815 25.107 13.117 40.172 16.188-.418-11.999-.836-23.863-1.115-35.865zm-49.797-428.448c8.787 0 15.762 3.908 15.762 8.793 0 4.745-6.975 8.652-15.762 8.652-8.789 0-15.764-3.907-15.764-8.652 0-4.885 6.975-8.793 15.764-8.793zm242.15 88.761c-1.256-29.726-18.691-90.714-69.047-97.971-6.555-.698-13.111-1.396-18.551-1.396-15.902.279-35.988 4.886-38.639 26.099.418 8.791 4.881 13.956 8.787 17.724 7.951 7.536 18.133 12.421 30.688 16.189 26.781 7.955 53.285.697 52.865 39.355 0 21.073-12.273 41.449-35.848 57.499-16.041 11.164-37.104 19.677-60.957 24.144-.418 13.815-.836 27.771-1.254 41.728 13.809 3.35 21.131 8.513 30.756 15.073 17.016 11.164 20.711 24.98 20.711 38.657V10772.245c0 13.956-2.998 27.634-19.875 39.217-10.461 7.117-21.654 12.979-37.137 16.329-.42 13.955.609 27.911.191 41.867 6.695 2.093 8.828 4.885 13.709 8.094 11.438 7.397 12.594 15.492 12.594 23.028v.697c0 7.676-.014 15.91-11.172 23.446-5.301 3.628-10.26 6.56-18.07 8.932-.279 12.002.658 23.865.24 35.867 14.926-3.071 22.855-8.373 34.154-16.188 17.715-11.444 25.365-29.588 25.365-50.939v-2.792c0-19.817-5.926-36.844-21.828-48.288 6.975-3.209 9.713-6.978 15.852-11.024 23.293-15.91 36.494-39.774 36.494-67.407v-2.931c0-27.772-11.002-51.219-34.576-66.988-2.371-1.396-1.246-2.931-3.617-4.188 12.414-4.884 25.111-10.885 35.154-17.863 30.271-20.935 53.011-51.499 53.011-86.947zm-82.996-71.315c-8.787 0-15.762-3.907-15.762-8.652 0-4.885 6.975-8.793 15.762-8.793 8.789 0 15.762 3.908 15.762 8.793 0 4.744-6.973 8.652-15.762 8.652z" />
+                                   </svg>
+                                   <h4 class="mb-4">Cancer Care</h4>
+                                   <p class="mb-4 text-secondary">Our Cancer Care Service is designed to offer a
+                                        comprehensive range of services, from early diagnosis and cutting-edge
+                                        treatments to personalized care plans and survivorship support.</p>
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                         <div class="card border-0 border-bottom border-primary shadow-sm">
+                              <div class="card-body text-center p-4 p-xxl-5">
+                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="56" height="56"
+                                        fill="currentColor" fill="#007BFF">
+                                        <path
+                                             d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-12h-2v4h2v-4zm0 6h-2v2h2v-2z" />
+                                   </svg>
+
+                                   <h4 class="mb-4">Continuous Improvement</h4>
+                                   <p class="mb-4 text-secondary">Our diagnostic and treatment facilities are equipped
+                                        with the latest advancements, enabling us to offer precise and effective
+                                        interventions for various types of cancers.</p>
+
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                         <div class="card border-0 border-bottom border-primary shadow-sm">
+                              <div class="card-body text-center p-4 p-xxl-5">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor"
+                                        class="bi bi-heart-pulse text-primary mb-4" viewBox="0 0 16 16">
+                                        <path
+                                             d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z" />
+                                        <path
+                                             d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z" />
+                                   </svg>
+                                   <h4 class="mb-4">Sergical Services</h4>
+                                   <p class="mb-4 text-secondary">Our
+                                        Surgical Services encompass a wide spectrum of specialties. With a focus on
+                                        safety, precision, and patient comfort, we aim to provide optimal surgical
+                                        outcomes and a pathway to a healthier future.</p>
+
+
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                         <div class="card border-0 border-bottom border-primary shadow-sm">
+                              <div class="card-body text-center p-4 p-xxl-5">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor"
+                                        class="bi bi-mouse text-primary mb-4" viewBox="0 0 16 16">
+                                        <path
+                                             d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0v6zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
+                                   </svg>
+                                   <h4 class="mb-4">24/7 Support</h4>
+                                   <p class="mb-4 text-secondary"> Our providers are 24/7 available to our patients.
+                                        This means that
+                                        you can always get help when you need it, no matter what time it is.</p>
+
+
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <footer id="contact">
+          <div class="footer">
+               <div class="contain">
+                    <div class="col">
+                         <h2>Company</h2>
+                         <ul>
+                              <li>About us</li>
+                              <li> Our Mission</li>
+                              <li>Services</li>
+                         </ul>
+                    </div>
+                    <div class="col">
+                         <h2>Services</h2>
+                         <ul>
+                              <li>Emergency Services </li>
+                              <li>Outpatient Services</li>
+                              <li>Surgical Services</li>
+                              <li>Cancer Care</li>
+                              <li>All Other Services</li>
+                         </ul>
+                    </div>
+                    <div class="col">
+                         <h2>Contact us</h2>
+                         <ul>
+                              <li>+91-554478551</li>
+                              <li> careassistmedo@gmail.com</li>
+
+                         </ul>
+                    </div>
+
+                    <div class="col address">
+                         <h2>Our Head Branch </h2>
+                         <ul>
+                              <li>Hingna , Nagpur , Maharashtra-440009</li>
+                         </ul>
+                    </div>
+                    <div class="clearfix"></div>
+               </div>
+          </div>
+
+          <footer class="copyright">
+               <p class="text"> CareAssist Medical @All rights reserved</p>
+          </footer>
+
+
+
+     </footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<br>
+<br>
+
+    <div class="activity">
+        <div class="title">
+            <i class="fa-solid fa-list"></i>
+            <span class="text"> &nbsp; <b>All the Patients List</b></span>
+        </div>
+
+        <br>
+        <br>
+
+        <table id="zebra-h" class="table">
+            <thead>
+                <th>Sr No.</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Disease</th>
+                <th>Action</th>
+            </thead>
+            <tr *ngFor="let patient of patientList,index as i">
+                <td>{{i+1}}</td>
+                <td>
+                    {{patient.patientId}}
+                </td>
+                <td>{{patient.patientName}}</td>
+                <td>{{patient.patientEmail}}</td>
+                <td>{{patient.patientDOB}}</td>
+                <td>{{patient.patientGender}}</td>
+                <td>{{patient.patientContact}}</td>
+                <td>{{patient.patientAddress}}</td>
+                <td>{{patient.patientDisease}}</td>
+                <td><button class="btn btn-danger" style="background-color:green;color: white;"
+                        (click)="generateInvoice(patient.patientId)">Generate Invoice</button></td>
+
+
+
+            </tr>
+        </table>
+    </div>
+
+<div class="space"></div>

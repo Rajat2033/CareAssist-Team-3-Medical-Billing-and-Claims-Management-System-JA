@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section class="vh-120 bg-image" style="background-image: url('../../../../assets/registerBack.png');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#87CEEB'}">Registration
+                                    Form Healthcare Provider</h2>
+
+                                <form #formData="ngForm" (ngSubmit)="registerProvider(formData)">
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="name">Enter Name</label>
+                                        <input type="text" id="name" class="form-control "
+                                            placeholder="Enter Your Full Name" name="providerName" ngModel required
+                                            #providerName="ngModel">
+                                        <span *ngIf="providerName.touched && providerName.invalid"
+                                            style="color: red;">Enter Proper Name</span>
+
+
+
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="password">Enter Password</label>
+                                        <input type="password" class="form-control " id="password"
+                                            name="providerPassword" placeholder="Enter Your Password" ngModel required
+                                            #providerPassword="ngModel"
+                                           >
+                                        <span *ngIf="providerPassword.touched && providerPassword.invalid  "
+                                            style="color: red;">Enter Proper Password 
+                                            <br>
+
+                                       
+                                            Password must contain
+                                            at least one digit, one lowercase letter, one uppercase letter, one
+                                            special character, and be at least 8 characters long.</span>
+                                    </div>
+
+
+                                    <div class="form-outline md-4">
+                                        <label class="form-label" for="email">Enter Email Id</label>
+                                        <input type="email" id="email" class="form-control " id="email"
+                                            name="providerEmail" placeholder="Ex : xyz@gmail.com" ngModel required
+                                            #email="ngModel" email>
+                                        <span *ngIf="email.touched && email.invalid" style="color: red;">Email Adress is
+                                            mandatory and in Invalid format</span>
+
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="control-label">Enter Gender</label>
+                                        <select type="dropdown" class="form-control" name="providerGender"
+                                            #providerGender="ngModel" ngModel required placeholder="select Gender">
+                                            <option value="" disabled selected>select gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Not Say"> Prefer Not to say</option>
+                                        </select>
+                                        <span *ngIf="providerGender.touched && providerGender.invalid"
+                                            style="color: red;">Gender is Necessary</span>
+                                    </div>
+
+
+
+                                    <div class="form-outline md-4">
+                                        <label class="label-control" for="speciality">Enter your Speciality</label>
+                                        <input type="text" class="form-control" id="speciality"
+                                            name="providerSpeciality" placeholder="Enter speciality" ngModel required
+                                            #providerSpeciality="ngModel">
+                                        <span *ngIf="providerSpeciality.touched && providerSpeciality.invalid"
+                                            style="color: red;"> Speciality is mandatory</span>
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="label-control " for="designation">Enter your Designation</label>
+                                        <input type="text" class="form-control" id="designation"
+                                            name="providerDesignation" placeholder="Enter Designation" ngModel required
+                                            #providerDesignation="ngModel">
+                                        <span *ngIf="providerDesignation.touched && providerDesignation.invalid"
+                                            style="color: red;">Enter Designation</span>
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="label-control" for="exp">Enter your Experience</label>
+                                        <select type="dropdown" class="form-control" name="providerExperience" ngModel
+                                            required #providerExperience="ngModel">
+                                            <option value="" disabled selected>select</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1-2</option>
+                                            <option value="2">2-4</option>
+                                            <option value="4">4-7</option>
+                                            <option value="7"> 7-12 </option>
+                                        </select>
+                                        <span
+                                            *ngIf="providerExperience.touched && providerExperience.invalid" style="color: red;">Experience
+                                            is also mandatory</span>
+                                    </div>
+
+                                    <div class="form-outline md-4">
+                                        <label class="label-control" for="qualification">Enter your
+                                            qualification</label>
+                                        <input type="text" class="form-control" id="qualification"
+                                            name="providerQualification" placeholder="Ex : MBBS"
+                                         ngModel required #providerQualifictaion="ngModel">
+                                         <span *ngIf="providerQualifictaion.touched && providerQualifictaion.invalid"
+                                            style="color: red;">Qualification is mandatory</span>
+
+
+                                    </div>
+
+                                    <br>
+                                    <button type="submit" class="btn btn-primary col-lg-12"
+                                        [disabled]="formData.invalid">Register</button>
+                                    <br>
+
+                                    <p class="text-center text-muted mb-0">Have already an account? <a
+                                            class="fw-bold text-body"><u routerLink="/login/provider">Login here</u></a>
+                                    </p>
+
+                                    <i class="bi bi-arrow-left"> </i>
+                                    <button class="btn" routerLink="/"> Back to home</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <footer class="copyright">
+            <p class="text"> CareAssist Medical All rights reserved</p>
+        </footer>
+    </section>
+
+
+</body>
+
+</html>

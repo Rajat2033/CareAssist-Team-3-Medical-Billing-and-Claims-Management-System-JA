@@ -1,0 +1,43 @@
+<br>
+
+<br>
+<div class="title">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <span class="text"> &nbsp;<b>Search Insurance Plan By Type</b> </span>
+</div>
+<br>
+
+<form class="d-flex" #searchForm="ngForm" (ngSubmit)="onSearch()">
+    <input class="form-control me-2" type="search" name="planType" [(ngModel)]="searchInput"
+        placeholder="Search  Ex: Accident/Medical" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<br>
+<br>
+<div class="title">
+    <i class="fa-solid fa-list"></i>
+    <span class="text"> &nbsp; <b>All the Insurance Plans List</b></span>
+</div>
+<table class="table" id="zebra-h">
+    <thead>
+        <th>Sr No.</th>
+        <th>Plan Id</th>
+        <th>Plan Name</th>
+        <th>Plan Type</th>
+        <th>Cover Amount</th>
+        <th>Plan Emi</th>
+        <th>Details</th>
+        <th>Action</th>
+    </thead>
+    <tr *ngFor="let plan of insurancePlanList,index as i">
+        <td>{{i+1}}</td>
+        <td>{{plan.planId}}</td>
+        <td>{{plan.planName}}</td>
+        <td>{{plan.planType}}</td>
+        <td>{{plan.planCoverAmount}}</td>
+        <td>{{plan.planEmi}}</td>
+        <td>{{plan.planDetails}}</td>
+        <td><button class="btn " style="background-color: greenyellow;" (click)="generateClaim(plan.planId)">Request
+                Claim</button></td>
+    </tr>
+    <div class="space"></div>

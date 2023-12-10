@@ -1,0 +1,103 @@
+
+<br>
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h2 class="text-uppercase text-center mb-5" [ngStyle]="{color:'#007BFF'}">Update
+                            Patients</h2>
+
+                        <form #formData="ngForm" (ngSubmit)="updatePatient(formData)">
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="id"><b>Enter Your Id</b></label>
+                                <input type="number" id="id" class="form-control " placeholder="Enter Your Id"
+                                    name="patientId" #patientId="ngModel" ngModel required>
+                                <span style="color: red;" *ngIf="patientId.touched &&  patientId.invalid">Id is
+                                    mandatory</span>
+
+
+                            </div>
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="name"><b>Enter Your Name</b></label>
+                                <input type="text" id="name" class="form-control "
+                                    placeholder="Enter Your patient Name " name="patientName" #patientName="ngModel"
+                                    ngModel required>
+                                <span style="color: red;" *ngIf="patientName.touched &&  patientName.invalid">Enter your
+                                    name Properly</span>
+
+                            </div>
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="email"><b>Enter Your Email Address</b></label>
+                                <input type="email" id="email" class="form-control "
+                                    placeholder="Enter Your  Email " name="patientEmail" #patientEmail="ngModel"
+                                    ngModel required>
+                                <span style="color: red;" *ngIf="patientEmail.touched &&  patientEmail.invalid">Enter your
+                                    Email Properly</span>
+
+                            </div>
+
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="password"><b>Enter Your Password</b></label>
+                                <input type="password" class="form-control " id="password" name="patientPassword"
+                                    placeholder="Enter Your Password" ngModel required #patientPass="ngModel">
+                                <span style="color: red;" *ngIf="patientPass.touched &&  patientPass.invalid">Enter your
+                                    password Properly</span>
+
+                            </div>
+
+
+                            <div class="form-outline md-4">
+                                <label class="form-label" for="date" ><b>Enter Date of Birth</b></label>
+                                <input type="date" id="date" class="form-control " name="patientDOB"
+                                    placeholder="Ex : dd/mm/yy" #patientDOB="ngModel" ngModel required>
+                                <span style="color: red;" *ngIf="patientDOB.touched &&  patientDOB.invalid">Enter your
+                                    Date of birth</span>
+                            </div>
+
+                            <label class="control-label"><b>Enter Gender</b></label>
+                            <select type="dropdown" class="form-control" name="patientGender" #patientGender="ngModel"
+                                ngModel required placeholder="select Gender">
+                                <option value="" disabled selected>select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Not Say"> Prefer Not to say</option>
+                            </select>
+                            <span style="color: red;" *ngIf="patientGender.touched &&  patientGender.invalid">Enter
+                                Gender</span>
+
+
+                            <div class="form-outline md-4">
+                                <label class="label-control" for="contact"><b>Enter Your Contact Number</b></label>
+                                <input type="tel" class="form-control" id="contact" name="patientContact"
+                                    placeholder="Enter Contact" ngModel #patientContact="ngModel" required>
+                                <span style="color: red;"
+                                    *ngIf="patientContact.touched &&  patientContact.invalid">Enter Contact
+                                    Properly</span>
+                            </div>
+
+                            <label class="label-control " for="address"><b>Enter Your Address</b></label>
+                            <input type="text" class="form-control" id="address" name="patientAddress"
+                                placeholder="Enter Address" ngModel required>
+
+                           
+                            <label class="label-control" for="symptoms"><b>Enter Your Symptoms</b></label>
+                            <input type="text" class="form-control" id="symptoms" name="patientDisease"
+                                placeholder="Enter Your Disease" ngModel required>
+
+                            <br>
+                            <button type="submit" class="btn btn-primary col-lg-12" [disabled]="formData.invalid"><b>Update
+                                Patient</b></button>
+                            <br>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

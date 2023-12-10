@@ -1,0 +1,80 @@
+
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+    padding: 0px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    /* z-index: 1000; */
+  
+  }
+  .navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 30px !important;
+  }
+  
+  header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #140b0b;
+  
+  }
+  
+  header .navbar ul {
+    list-style: none;
+  }
+  
+  header .navbar ul li {
+    position: relative;
+    float: left;
+  
+  }
+  
+  header .navbar ul li , .dropdown.btn {
+    font-size: 20px;
+    padding: 20px;
+    color: rgb(11, 11, 12);
+    /* display: block; */
+  }
+  
+  header .navbar ul li:hover {
+    background: #ab2bc2;
+    color: #fff;
+  
+  }
+  
+    
+    /* logo */
+    .img-responsive {
+      height: auto;
+      width: auto;
+      max-height: 50px;
+      max-width: 320px;
+  }
+  
+  .dropdown-menu a {
+    float: none;
+    color: black;
+    padding: 12px 22px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: grid;
+  }
+  
+  /* You can add global styles to this file, and also import other style files */
